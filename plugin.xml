@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova.mlkit.plugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+        <name>MLKitPlugin</name>
+    <js-module name="MLKitPlugin" src="www/MLKitPlugin.js">
+    <clobbers target="cordova.plugins.MLKitPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+        <feature name="MLKitPlugin"><param name="android-package" value="cordova.mlkit.plugin.MLKitPlugin" /></feature>
+        </config-file><config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/MLKitPlugin.java" target-dir="src/cordova/mlkit/plugin/MLKitPlugin" />
+        <source-file src="src/android/BarcodeScanningFragment.java" target-dir="src/cordova/mlkit/plugin/BarcodeScanningFragment"/>
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference"/>
+         <source-file src="src/android/layout/camera_layout.xml" target-dir="app/src/main/res/layout" />
+
+	    <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-feature android:name="android.hardware.camera" android:required="false"/>
+            <uses-feature android:name="android.hardware.camera.autofocus"/>
+		</config-file>
+
+    </platform>
+</plugin>

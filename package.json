@@ -1,0 +1,17 @@
+{
+  "name": "cordova.mlkit.plugin",
+  "version": "0.0.1",
+  "description": "Barcode or Qrcode reader",
+  "cordova": {
+    "id": "cordova.mlkit.plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "serhan maknik",
+  "license": "ISC"
+}
